@@ -1,0 +1,25 @@
+{
+  "name": "gamejamproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemanuque/GameJamProject.git"
+  },
+  "author": "Jose Manuel Quesada, Juleisy Porras, Nelson Alvarado, Fernando Vega, Royner Baltodano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josemanuque/GameJamProject/issues"
+  },
+  "homepage": "https://github.com/josemanuque/GameJamProject#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
