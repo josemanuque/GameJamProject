@@ -1,5 +1,5 @@
 const express = require('express');
-const initMongoDB = require('./config/mongo/db');
+const initMongoDB = require('./backend/config/mongo/db');
 
 const app = express();
 

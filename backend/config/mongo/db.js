@@ -1,19 +1,15 @@
 // MongoDB Connection
 const mongoose = require('mongoose');
-const DB_URL = ``
+const DB_URL = `mongodb://127.0.0.1/gameJam`
 
-module.exports = () => {
-    const connect = () => {
-        mongoose.connect(
-            DB_URL,
-            (err) => {
-                if (err){
-                    console.log('DB: ERROR');
-                } else {
-                    console.log('Mongo\'s Working!');
-                }
-            }
-        ) 
-        }
-    connect();
-};
+const connect = async () => {
+    try{
+        mongoose.connect(DB_URL)
+        console.log('Mongo connected')
+    }catch(error){
+        console.log(error);
+        process.exit()
+    } 
+}
+
+module.exports = connect
