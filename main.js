@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require("path");
-const hbs = require("hbs");
+//const hbs = require("hbs");
 const userSch = require("./backend/app/models/user_model");
 
 const initMongoDB = require('./backend/config/mongo/db');
@@ -10,7 +10,7 @@ const viewsPath = path.join(__dirname, '/frontend');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.set("view engine", "hbs");
+//app.set("view engine", "hbs");
 app.set("views", viewsPath);
 
 
@@ -20,11 +20,11 @@ app.listen(3000, (req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.sendFile('frontend/index.html', { root: __dirname });
 });
 
 app.get('/register', (req, res) => {
-    res.render('register');
+    res.sendFile('frontend/register.html', { root: __dirname });
 });
 
 app.post('/register', async (req, res) => {
@@ -40,7 +40,7 @@ app.post('/register', async (req, res) => {
         password: req.body.password
     }
     await userSch.insertMany([data]);
-    res.render('index');
+    res.sendFile('frontend/index.html', { root: __dirname });
 
 
 
