@@ -23,7 +23,7 @@
       <main>
         <h1 class="d-flex justify-content-center mt-5" style="margin-top: 50px;">Please sign in</h1>
         <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-            <form class="text-center mt-0" style="max-width: 400px;">
+            <form id="formLogin" class="text-center mt-0" style="max-width: 400px;">
                 <div class="form-group">
                     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                 </div>
@@ -35,13 +35,14 @@
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                     <div class="mt-3">
-                        <p>Don't have an account? <a href="/register.html">Sign up</a></p>
+                        <p>Don't have an account? <a href="./register.html">Sign up</a></p>
                     </div>
                 <p class="mt-5 mb-1 text-muted">&copy; Rust-eze</p>
             </form>
 
         </div>
       </main>
-
+    <!-- Scripts -->
+    <script src="login.js"></script>
 </body>
 </html>

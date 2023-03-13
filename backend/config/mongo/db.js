@@ -1,7 +1,7 @@
 // MongoDB Connection
 const mongoose = require('mongoose');
-const DB_URL = "mongodb+srv://user1234:user1234@gamejam.dumd5i7.mongodb.net/?retryWrites=true&w=majority";
-// Instancia en linea abierta para todos, si no les gusta usan localhost, asegurense de que les conecte su local. Todo funciona
+const DB_URL = `mongodb://127.0.0.1/gameJam`
+
 const connect = async () => {
     try{
         mongoose.connect(DB_URL)
